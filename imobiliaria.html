@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario Imobiliaria</title>
+        <meta charset="utf-8">
+        
+        <script src="./scripts/jquery-3.5.1.js"></script>
+        <script src="./scripts/colaborador/proprietario.js"></script>
+        <link rel="stylesheet" type="text/css" href="proprietario.css">
+    </head>
+    <body>
+        <form name="formulario">
+            <p class="fonte">CADASTRO PROPRIETÁRIO</p>
+            <input type="hidden" id="id">
+            <div class="campo">
+                <label>Nome do Proprietário:</label> 
+                <input id="nome" type="text">
+            
+            </div>
+            <div class="campo" id="width">
+                <label>Endereço:</label> 
+                <input id="endereço" type="text">
+            </div>
+            <div class="campo">
+                <label>Telefone:</label> 
+                <input id="telefone" type="text">
+            </div>
+
+            <div class="campo">
+                <label>Tipo Imovel (Casa, Ap, Lote ou Kitnet)</label> 
+                <input type="text" id="tipoImo">
+                    
+            </div>
+
+            <div class="campo">
+                <label>Finalidade (Aluguel ou Venda) </label> 
+                <input type="text" id="fin">
+            </div>
+            <div class="campo">
+                <label>Preço:</label> 
+                <input id="preço" type="number">
+            </div>
+        
+            <p>
+                <button id="salvar" type="button" class="botao" class="button">Salvar</button>
+            </p>
+
+            <hr>
+
+            <p>
+                <label>Proprietários Cadastrados</label> 
+            </p>
+            <p >
+                    <label>Filtrar por Faixa de Valor:</label> 
+                    <input class="filtro"  id="inicial" type="number"> 
+                    <input class="filtro" id="final" type="number">
+                    <button id="filtrar" type="button" class="botao">Filtrar</button></p>
+                <table border="1" class="table" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>ENDEREÇO</th>
+                            <th>TELEFONE</th>
+                            <th>TIPO IMOVEL</th>
+                            <th>FINALIDADE</th>
+                            <th>VALOR</th>
+                            <th>AÇÔES</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="grid" >
+
+                    </tbody>
+                </table>
+            </p>
+            
+        </form>
+    </body>
+</html>
